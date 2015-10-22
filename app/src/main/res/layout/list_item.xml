@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:id="@+id/songTextInfo"
+    >
+
+    <!-- Song Label -->
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Song: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/md_blue_900"
+
+
+        android:textStyle="bold" />
+
+    <!-- Artist label -->
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Artist: "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/md_grey_700" />
+
+    <!-- Direct URL -->
+    <TextView
+        android:id="@+id/direct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Direct: "
+        android:textColor="#ff000000"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+
+        />
+
+</LinearLayout>

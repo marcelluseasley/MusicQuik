@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+
+
+
+
+    <ImageView
+    android:id="@+id/ivAlbumArt"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+
+
+    android:layout_alignParentLeft="true"
+
+    android:layout_alignParentStart="true"
+    android:layout_centerVertical="true"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="10dp"
+    android:src="@drawable/placeholder_musiquik" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel_progressbar"
+
+        android:orientation="vertical">
+        <!-- Previous Button -->
+
+
+        <TextView
+            android:id="@+id/tvSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_alignLeft="@+id/linearLayout"
+            android:layout_alignStart="@+id/linearLayout"
+
+
+            android:ellipsize="marquee"
+            android:fadingEdge="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="text"
+            android:textColor="@color/md_blue_grey_200"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignEnd="@+id/tvSong"
+            android:layout_alignLeft="@+id/tvSong"
+            android:layout_alignRight="@+id/tvSong"
+            android:layout_below="@+id/tvSong"
+            android:ellipsize="marquee"
+            android:fadingEdge="vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="text"
+            android:textColor="@color/md_blue_grey_400"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignEnd="@+id/tvArtist"
+            android:layout_alignLeft="@+id/tvArtist"
+            android:layout_alignRight="@+id/tvArtist"
+            android:layout_below="@+id/tvArtist"
+            android:ellipsize="marquee"
+            android:fadingEdge="vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="text"
+            android:textColor="@color/md_blue_grey_400"
+            android:textSize="14sp" />
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAlbum"
+            android:layout_marginTop="5dp"
+
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <!-- Play Button -->
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/btnShuffle"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/btn_play" />
+            <!-- Next Button -->
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/btnShuffle"
+                android:layout_toRightOf="@id/btnPlay"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/btn_next" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

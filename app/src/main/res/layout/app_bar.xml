@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/my_toolbar"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@color/ColorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_gravity="left"
+        android:id="@+id/toolbar_title"
+        style="@style/CustomTitleBarStyle"
+        />
+
+</android.support.v7.widget.Toolbar>

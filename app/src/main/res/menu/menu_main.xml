@@ -1,0 +1,79 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <!-- <item
+         android:id="@+id/action_shuffle"
+         android:icon="@drawable/ic_shuffle_white_24dp"
+         android:orderInCategory="1"
+         app:showAsAction="always"
+         android:title="Shuffle"/>-->
+
+    <!-- <item
+        android:id="@+id/action_end"
+        android:icon="@drawable/ic_clear_white_24dp"
+        android:orderInCategory="2"
+        app:showAsAction="always"
+        android:title="End"/>-->
+    <!--<item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="92"
+        android:title="@string/action_refresh"
+        android:icon="@drawable/ic_refresh_white_24dp"
+        android:visible="false"
+        app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/action_playlist_add"
+        android:orderInCategory="93"
+        android:title="@string/action_playlist_add"
+        android:icon="@drawable/ic_playlist_add_white_24dp"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="94"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_news"
+        android:orderInCategory="95"
+        android:title="@string/action_news"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="96"
+        android:title="@string/action_about"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_contact"
+        android:orderInCategory="97"
+        android:title="@string/action_contact"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="98"
+        android:title="@string/action_help"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_dmca"
+        android:orderInCategory="99"
+        android:title="@string/action_dmca"
+        app:showAsAction="never" />
+
+
+
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="100"
+        android:title="Exit"
+        app:showAsAction="never" />
+
+</menu>

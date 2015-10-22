@@ -1,0 +1,98 @@
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoParalaxOffset="100dp"
+    sothree:umanoOverlay="false"
+
+    sothree:umanoClipPanel="false"
+    sothree:umanoShadowHeight="4dp"
+
+    >
+
+    <!-- sothree:umanoDragView="@+id/ivAlbumArt" -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mainactivity_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+
+        tools:context=".MainActivity">
+
+
+        <include layout="@layout/app_bar" />
+
+
+        <it.neokree.materialtabs.MaterialTabHost
+            android:id="@+id/materialTabHost"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/my_toolbar"
+            app:accentColor="@color/ColorAccent"
+            app:primaryColor="@color/ColorPrimary"
+            app:textColor="@android:color/white"></it.neokree.materialtabs.MaterialTabHost>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!--<TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TabWidget>-->
+
+            <!--<FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">-->
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
+
+            </android.support.v4.view.ViewPager>
+
+
+            <!--</FrameLayout>-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- android:background="@color/md_indigo_900" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:clickable="true"
+        android:orientation="vertical"
+        android:id="@+id/container"
+        android:background="@drawable/gradient">
+
+
+        <include layout="@layout/mini_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <include layout="@layout/large_player" />
+
+
+    </LinearLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <!-- android:layout_above="@id/player_footer_bg" -->

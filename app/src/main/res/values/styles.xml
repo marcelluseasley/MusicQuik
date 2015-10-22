@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+
+
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorAccent</item>
+        <item name="android:textColorSecondary">@color/md_white_1000</item>
+
+    </style>
+
+
+<style name="CustomTitleBarStyle">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:typeface">monospace</item>
+    <item name="android:textSize">14pt</item>
+    <item name="android:textColor">@color/md_white_1000</item>
+
+</style>
+
+
+    <style name="SDL.Button">
+        <item name="android:background">?sdlButtonBackground</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/grid_9</item>
+        <item name="android:textColor">@color/ColorPrimary</item>
+        </style>
+    <style name="SDL.TextView.Message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/ColorPrimaryDark</item>
+
+    </style>
+
+
+</resources>
