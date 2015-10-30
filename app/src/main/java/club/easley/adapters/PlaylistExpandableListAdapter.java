@@ -203,6 +203,8 @@ public class PlaylistExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
+
+
         return this._listDataChild.get(this._listDataHeader.get(groupPosition))
                 .size();
     }
@@ -239,7 +241,7 @@ public class PlaylistExpandableListAdapter extends BaseExpandableListAdapter {
         TextView lblListSubHeader = (TextView) convertView.findViewById(R.id.lblListSubHeader);
         lblListSubHeader.setTypeface(font,Typeface.BOLD);
         lblListHeader.setText(headerTitle);
-        lblListSubHeader.setText(String.valueOf(numChildren) + " " + ((numChildren > 1) ? "songs" : "song"));
+        lblListSubHeader.setText(String.valueOf(numChildren) + " " + ((numChildren > 1 || (numChildren == 0)) ? "songs" : "song"));
 
         return convertView;
     }

@@ -46,7 +46,7 @@ Visit www.musicgold.info for more information.
         <item>Tracks</item>
         <item>Artists</item>
         <item>Albums</item>
-        <item>Playlists</item>
+        <!-- <item>Playlists</item> -->
     </string-array>
     <string name="title_activity_launcher">LauncherActivity</string>
 

@@ -88,7 +88,7 @@ public class PlaylistFragment extends Fragment implements AdapterView.OnItemClic
 
 
         getSongListAndInit();
-        prepareListData();
+        //prepareListData();
         updateTrackList();
 
 
@@ -118,7 +118,7 @@ public class PlaylistFragment extends Fragment implements AdapterView.OnItemClic
 
                 for (Song s : fragSongs) {
 
-                    if (s.getTitle().equals(strChild) && s.getArtist().equals(strGroup)) {
+                    if ((s.getTitle()+"\n"+s.getArtist()).equals(strChild)) {
                         songPosition = i;
                         break;
                     }
@@ -169,7 +169,7 @@ public class PlaylistFragment extends Fragment implements AdapterView.OnItemClic
         songMap = ArrayListMultimap.create();
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
-
+        List<String> alphaKeys = new ArrayList<String>();
 
         ContentResolver cr = getActivity().getBaseContext().getContentResolver();
         final Uri uri=MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI;
@@ -188,17 +188,17 @@ public class PlaylistFragment extends Fragment implements AdapterView.OnItemClic
                 playlists.moveToPosition(i);
                 int playlistID = playlists.getInt(playlists.getColumnIndex(MediaStore.Audio.Playlists._ID));
                 String playlistName = playlists.getString(playlists.getColumnIndex(MediaStore.Audio.Playlists.NAME));
-                songMap.put(playlistName,"");
-
+                //songMap.put(playlistName,"");
+                alphaKeys.add(playlistName);
 
             }
 
         }
 
 
-        Set<String> keys = songMap.keySet();
-        List<String> alphaKeys = new ArrayList<String>();
-        alphaKeys.addAll(keys);
+        //Set<String> keys = songMap.keySet();
+
+
         //sort list
         Collections.sort(alphaKeys, new Comparator<String>() {
             public int compare(String a, String b) {
@@ -236,7 +236,7 @@ public class PlaylistFragment extends Fragment implements AdapterView.OnItemClic
                             .getColumnIndex(MediaStore.Audio.Playlists.Members.ARTIST));
                     System.out.println(songTitle + " " + songArtist);
                     if(songTitle.equalsIgnoreCase(""));
-                    temp.add(songTitle);
+                    temp.add(songTitle+ "\n" +songArtist);
 
                 } while (c.moveToNext());
             }

@@ -42,7 +42,7 @@
                 android:singleLine="true"
 
 
-                android:textColor="@android:color/white"
+                android:textColor="@color/md_blue_grey_500"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 android:layout_weight="1" />
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:singleLine="true"
-                android:textColor="#C0C0C0"
+                android:textColor="@color/md_blue_grey_500"
                 android:textSize="13dp" />
 
 

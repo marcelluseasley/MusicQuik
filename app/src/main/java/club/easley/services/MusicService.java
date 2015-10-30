@@ -19,6 +19,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.Gravity;
@@ -239,7 +240,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
                 .setContentIntent(pendingIntent)
                 .setSmallIcon(R.drawable.ic_music_playing)
                 .setOngoing(true)
-                .setContentTitle("Custom Big View");
+                .setContentTitle("MusiQuik");
 
 
 
@@ -262,6 +263,9 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         }
         notification.contentView.setTextViewText(R.id.textSongName, songTitle);
         notification.contentView.setTextViewText(R.id.textArtistName, songArtist);
+
+        notification.contentView.setTextColor(R.id.textSongName, getBaseContext().getResources().getColor(R.color.md_blue_grey_500));
+        notification.contentView.setTextColor(R.id.textArtistName, getBaseContext().getResources().getColor(R.color.md_blue_grey_500));
 
         setListeners(simpleView, context);
 

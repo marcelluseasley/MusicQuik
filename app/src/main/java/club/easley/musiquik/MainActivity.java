@@ -996,7 +996,7 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
         listFragments.add(tf);
         listFragments.add(af);
         listFragments.add(alf);
-        listFragments.add(new PlaylistFragment());
+        //listFragments.add(new PlaylistFragment());
 
         mqFragmentPagerAdapter = new club.easley.adapters.MusiQuikFragmentPagerAdapter(this, getSupportFragmentManager(), listFragments);
         viewPager.setAdapter(mqFragmentPagerAdapter);

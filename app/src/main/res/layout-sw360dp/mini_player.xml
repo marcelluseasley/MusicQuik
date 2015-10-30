@@ -109,8 +109,7 @@
                 android:fadingEdge="vertical"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
+
                 android:singleLine="true"
                 android:text=""
                 android:textColor="@color/md_blue_grey_200"
@@ -119,17 +118,16 @@
                 android:layout_alignTop="@+id/ivAlbumArt"
                 android:layout_alignLeft="@+id/linearLayout"
                 android:layout_alignStart="@+id/linearLayout"
-                android:ellipsize="marquee" />
+                 />
 
             <TextView
                 android:id="@+id/tvArtist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:ellipsize="marquee"
+
                 android:fadingEdge="vertical"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
+
                 android:singleLine="true"
                 android:text=""
                 android:textColor="@color/md_blue_grey_400"
@@ -144,10 +142,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:ellipsize="marquee"
+
                 android:fadingEdge="vertical"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
+
                 android:singleLine="true"
                 android:text=""
                 android:textColor="@color/md_blue_grey_400"

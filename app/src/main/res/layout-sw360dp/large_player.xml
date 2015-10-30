@@ -74,15 +74,14 @@
             android:layout_alignRight="@+id/tvSong_lrg"
             android:layout_below="@+id/tvSong_lrg"
             android:layout_gravity="center_horizontal"
-            android:ellipsize="marquee"
+
             android:fadingEdge="vertical"
             android:gravity="center"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:scrollHorizontally="true"
+
             android:singleLine="true"
             android:textColor="@color/md_blue_grey_400"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:autoText="true" />
+            android:autoText="false" />
 
         <TextView
             android:id="@+id/tvAlbum_lrg"
@@ -93,15 +92,14 @@
             android:layout_alignRight="@+id/tvArtist_lrg"
             android:layout_below="@+id/tvArtist_lrg"
             android:layout_gravity="center_horizontal"
-            android:ellipsize="marquee"
+
             android:fadingEdge="vertical"
             android:gravity="center"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:scrollHorizontally="true"
+
             android:singleLine="true"
             android:textColor="@color/md_blue_grey_400"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:autoText="true" />
+            android:autoText="false" />
 
 
     </LinearLayout>
