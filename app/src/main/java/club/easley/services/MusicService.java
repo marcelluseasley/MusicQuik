@@ -70,6 +70,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
     private static final int NOTIFY_ID = 1;
 
     private boolean shuffle = false;
+    private boolean repeat = false;
     private boolean paused = false;
     private boolean prepareComplete = false;
     private Random rand;
@@ -414,7 +415,10 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
                 }
                 songPosn = newSong;
             }
-        } else {
+        } else if (repeat){
+            //do nothing. replay song
+
+        }else {
             songPosn++;
             if (songPosn >= songs.size()) songPosn = 0;
         }
@@ -435,6 +439,16 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         } else {
             shuffle = true;
             displayToastMessage("Shuffle is on");
+        }
+    }
+
+    public void setRepeat(){
+        if (repeat) {
+            repeat = false;
+            displayToastMessage("Repeat is off");
+        } else {
+            repeat = true;
+            displayToastMessage("Repeat is on");
         }
     }
 
@@ -468,7 +482,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         public void run() {
             Toast t = new Toast(getApplicationContext());
             t.setGravity(Gravity.TOP|Gravity.CENTER,0,0);
-            t.makeText(getBaseContext(), mText, Toast.LENGTH_SHORT).show();
+            t.makeText(getApplicationContext(), mText, Toast.LENGTH_SHORT).show();
         }
     }
 

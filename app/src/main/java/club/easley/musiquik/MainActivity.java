@@ -171,6 +171,7 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
 
     private boolean paused = false, playbackPaused = false;
     private boolean shuffle = false;
+    private boolean repeat = false;
 
     Typeface font;
 
@@ -250,6 +251,7 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
         btnPrev = (ImageButton) findViewById(R.id.btnPrevious);
         btnNext = (ImageButton) findViewById(R.id.btnNext);
         btnShuffle = (ImageButton) findViewById(R.id.btnShuffle);
+        btnRepeat = (ImageButton)findViewById(R.id.btnRepeat);
         songProgressBar = (SeekBar) findViewById(R.id.songProgressBar);
         coverArt = (ImageView) findViewById(R.id.ivAlbumArt);
 
@@ -258,6 +260,7 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
         btnPrev_lrg = (ImageButton) findViewById(R.id.btnPrevious_lrg);
         btnNext_lrg = (ImageButton) findViewById(R.id.btnNext_lrg);
         btnShuffle_lrg = (ImageButton) findViewById(R.id.btnShuffle_lrg);
+        btnRepeat_lrg = (ImageButton)findViewById(R.id.btnRepeat_lrg);
         songProgressBar_lrg = (SeekBar) findViewById(R.id.songProgressBar_lrg);
         coverArt_lrg = (ImageView) findViewById(R.id.ivAlbumArt_lrg);
 
@@ -397,6 +400,42 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
                     musicSrv.setShuffle();
                     btnShuffle.setImageResource(R.drawable.ic_shuffle_white_36dp);
                     btnShuffle_lrg.setImageResource(R.drawable.ic_shuffle_white_36dp);
+                }
+            }
+        });
+
+        btnRepeat.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (repeat == false) {
+                    repeat = true;
+                    musicSrv.setRepeat();
+                    btnRepeat.setImageResource(R.mipmap.ic_repeat_green_36dp);
+                    btnRepeat_lrg.setImageResource(R.mipmap.ic_repeat_green_36dp);
+                } else {
+                    repeat = false;
+                    musicSrv.setRepeat();
+                    btnRepeat.setImageResource(R.drawable.ic_repeat_white_36dp);
+                    btnRepeat_lrg.setImageResource(R.drawable.ic_repeat_white_36dp);
+                }
+            }
+        });
+
+        btnRepeat_lrg.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (repeat == false) {
+                    repeat = true;
+                    musicSrv.setRepeat();
+                    btnRepeat.setImageResource(R.mipmap.ic_repeat_green_36dp);
+                    btnRepeat_lrg.setImageResource(R.mipmap.ic_repeat_green_36dp);
+                } else {
+                    repeat = false;
+                    musicSrv.setRepeat();
+                    btnRepeat.setImageResource(R.drawable.ic_repeat_white_36dp);
+                    btnRepeat_lrg.setImageResource(R.drawable.ic_repeat_white_36dp);
                 }
             }
         });

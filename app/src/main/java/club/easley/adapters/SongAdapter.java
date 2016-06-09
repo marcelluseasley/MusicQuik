@@ -1,5 +1,6 @@
 package club.easley.adapters;
 
+import android.content.ContentUris;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -41,11 +42,14 @@ import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
+import club.easley.fragments.TracksFragment;
 import club.easley.musiquik.MainActivity;
 import club.easley.musiquik.R;
 import club.easley.musiquik.Song;
 import club.easley.musiquik.Utilities;
 import wseemann.media.FFmpegMediaMetadataRetriever;
+
+
 
 
 public class SongAdapter extends BaseAdapter{
@@ -54,6 +58,7 @@ public class SongAdapter extends BaseAdapter{
     private LayoutInflater songInf;
     Context c;
     Utilities utis;
+
 
 
     public SongAdapter(Context c, ArrayList<Song> theSongs) {
@@ -96,7 +101,7 @@ public class SongAdapter extends BaseAdapter{
         //map to song layout
         LinearLayout songLay = (LinearLayout)songInf.inflate(c.getResources().getLayout(R.layout.song), parent, false);
 
-        //ImageView albumView = (ImageView)songLay.findViewById(R.id.album_imageView);
+        ImageView albumView = (ImageView)songLay.findViewById(R.id.album_imageView);
         TextView songView = (TextView)songLay.findViewById(R.id.song_title);
         TextView artistView = (TextView)songLay.findViewById(R.id.song_artist);
         TextView durationView = (TextView)songLay.findViewById(R.id.song_duration);
@@ -172,6 +177,11 @@ public class SongAdapter extends BaseAdapter{
         });
 //======================================DROPPY MENU SECTION END=============================
         //albumView.setImageDrawable(currSong.getBitmapDrawable());
+
+
+
+
+        albumView.setTag(R.id.album_imageView);
         songView.setText(currSong.getTitle());
         artistView.setText(currSong.getArtist());
         durationView.setText(utis.milliSecondsToTimer(currSong.getDuration()));

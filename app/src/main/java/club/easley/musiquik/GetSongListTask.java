@@ -130,7 +130,7 @@ Typeface font;
 
         //store search in external DB
         httpClient = new DefaultHttpClient();
-        httpPost = new HttpPost("http://heisenberg.musicgold.info/searchlog/index.php/MusicGoldLogger/add_search");
+        httpPost = new HttpPost("http://heisenberg.easley.club/searchlog/index.php/MusiQuikLogger/add_search");
         List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(3);
         nameValuePair.add(new BasicNameValuePair("query", searchQuery));
 
@@ -194,31 +194,32 @@ Typeface font;
 
         }*/
 
+        jsonStr = makePostRequestMP3Monkey(searchQuery);
+        searchEngineName = "mp3monkey"; //TODO: check on mp3monkey
 
-        jsonStr = makePostRequestMP3COFE(searchQuery);
-        searchEngineName = "mp3cofe";
 
 //TODO: check out emp3world.com which redirects to emp3world.to
 
 
-        if (jsonStr.equals("{}") || jsonStr.length() == 13) {
+        /*if (jsonStr.equals("{}") || jsonStr.length() == 13) {
+            jsonStr = makePostRequestMP3COFE(searchQuery);
+            searchEngineName = "mp3cofe";
 
-            jsonStr = makePostRequestMP3Monkey(searchQuery);
-            searchEngineName = "mp3monkey"; //TODO: check on mp3monkey
 
-        }
-        if (jsonStr.equals("{}") || jsonStr.length() == 13) {
+        }*/
+        /*if (jsonStr.equals("{}") || jsonStr.length() == 13) {
 
 
             jsonStr = makePostRequestTrendingMP3(searchQuery);
             searchEngineName = "trendingMP3"; //TODO: appears down for everyone
-        }
-        if (jsonStr.equals("{}") || jsonStr.length() == 13) {
+        }*/
+        /*if (jsonStr.equals("{}") || jsonStr.length() == 13) {
 
 
             jsonStr = makePostRequestMP3Rehab(searchQuery);
             searchEngineName = "mp3rehab"; //TODO: check on mp3rehab...down for everybody
-        }
+            //TODO: owner has let domain expire...NO!!!!!!
+        }*/
         if (jsonStr.equals("{}") || jsonStr.length() == 13) {
 
             Log.d("*****NO RESULTS*****", "No results. Don't attempt Json parse");
@@ -391,7 +392,7 @@ Typeface font;
 //
                                         //store search in external DB
                                         httpClient = new DefaultHttpClient();
-                                        httpPost = new HttpPost("http://heisenberg.musicgold.info/searchlog/index.php/MusicGoldLogger/add_download");
+                                        httpPost = new HttpPost("http://heisenberg.easley.club/searchlog/index.php/MusiQuikLogger/add_download");
                                         List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(6);
 
                                         String ipAddress = Utils.getIPAddress(true);
