@@ -603,7 +603,7 @@ Typeface font;
         return null;
     }
 
-    private String makePostRequestMP3COFE(String queryMotherFucker) {
+    private String makePostRequestMP3COFE(String queryMF) {
         JSONObject completeJSONTracks = new JSONObject();
         JSONObject jsonTrack;
         JSONArray jsonTracks = new JSONArray();
@@ -615,12 +615,12 @@ Typeface font;
 
         try {
             Log.d("TRYING TO CONNECT", "MP3COFE.COM");
-            referer = url + "/?m=" + URLEncoder.encode(queryMotherFucker, "UTF-8");
+            referer = url + "/?m=" + URLEncoder.encode(queryMF, "UTF-8");
 
             //Log.d("REFERER", referer);
 
             Document doc = Jsoup.connect(url)
-                    .data("m", queryMotherFucker)
+                    .data("m", queryMF)
                     .header("Host", "mp3cofe.com")
                             //.header("Host", "get.mycounter.ua")
                     .header("User-Agent", "Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/_BuildID_) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36")
@@ -697,7 +697,7 @@ Typeface font;
 
     }
 
-    private String makePostRequestFullSongsNet(String queryMotherFucker) {
+    private String makePostRequestFullSongsNet(String queryMF) {
         String directUrl;
         String artist;
         String name;
@@ -713,7 +713,7 @@ Typeface font;
         try {
 
             Document doc = Jsoup.connect(url)
-                    .data("txtSearch", URLEncoder.encode(queryMotherFucker, "UTF-8"))
+                    .data("txtSearch", URLEncoder.encode(queryMF, "UTF-8"))
                     .data("cmdSearch", "Search")
                     .data("type", "mp3")
                     .data("dosearch", "dosearch")
@@ -757,7 +757,7 @@ Typeface font;
                         name = songArtistArray[0];
                         artist = songArtistArray[1];
 
-                        //now traverse the bullshit URL for the directUrl
+                        //now traverse the URL for the directUrl
 
                         //System.out.println(tableTitle);
                         String urlToDirectUrl = tableContent.select("div.title").select("a").attr("href");
@@ -821,7 +821,7 @@ Typeface font;
 
     }
 
-    private String makePostRequestMP3Skull(String queryMotherFucker) {
+    private String makePostRequestMP3Skull(String queryMF) {
         String directUrl;
         String artist;
         String name;
@@ -879,13 +879,13 @@ Typeface font;
                 }
             }
 
-            //now get list of fucking songs
+            //now get list of songs
 
-            String mp3skullUrl = realUrl + "/search_db.php?q=" + URLEncoder.encode(queryMotherFucker, "UTF-8") + "&fckh=" + fckhValue;
+            String mp3skullUrl = realUrl + "/search_db.php?q=" + URLEncoder.encode(queryMF, "UTF-8") + "&fckh=" + fckhValue;
             doc = Jsoup.connect(mp3skullUrl)
                     .header("Host", realUrl)
                     .header(":method", "GET")
-                    .header(":path", "/search_db.php?q=" + URLEncoder.encode(queryMotherFucker, "UTF-8") + "&fckh=" + fckhValue)
+                    .header(":path", "/search_db.php?q=" + URLEncoder.encode(queryMF, "UTF-8") + "&fckh=" + fckhValue)
                     .header(":scheme", "https")
                     .header(":version", "HTTP/1.1")
                     .header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
@@ -946,7 +946,7 @@ Typeface font;
         return completeJSONTracks.toString();
     }
 
-    private String makePostRequestTrendingMP3(String queryMotherFucker) {
+    private String makePostRequestTrendingMP3(String queryMF) {
         String directUrl = "";
         String artist;
         String name;
@@ -957,7 +957,7 @@ Typeface font;
         //http://mp3cofe.com/?m=all+of+the+lights
         String url = "http://trendingmp3.com/";
 
-        String query = queryMotherFucker;
+        String query = queryMF;
         String referer = url;
 
         try {
@@ -1041,7 +1041,7 @@ Typeface font;
 
     }
 
-    private String makePostRequestMP3Rehab(String queryMotherFucker) {
+    private String makePostRequestMP3Rehab(String queryMF) {
         String directUrl = "";
         String artist;
         String name;
@@ -1052,7 +1052,7 @@ Typeface font;
 
         String url = "http://mp3rehab.com/find.php";
 
-        String query = queryMotherFucker;
+        String query = queryMF;
 
         try {
             Log.d("TRYING TO CONNECT", "MP3REHAB.COM");
@@ -1139,7 +1139,7 @@ Typeface font;
     }
 
 
-    private String makePostRequestMP3Monkey(String queryMotherFucker) {
+    private String makePostRequestMP3Monkey(String queryMF) {
         String directUrl = "";
         String artist;
         String name;
@@ -1150,7 +1150,7 @@ Typeface font;
 
         String url = "http://mp3monkey.net/searchProxy.php";
 
-        String query = queryMotherFucker;
+        String query = queryMF;
 
         try {
             Log.d("TRYING TO CONNECT", "MP3MONKEY.COM");
