@@ -427,7 +427,7 @@ public class PlaylistFragment extends Fragment implements AdapterView.OnItemClic
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.action_playlist_add){
+       /* if(item.getItemId() == R.id.action_playlist_add){
             Log.d("MENU ITEM CLICK", "PLAYLIST_ADD");
             //Toast.makeText(getActivity().getBaseContext(),"Add playlist",Toast.LENGTH_LONG).show();
 
@@ -468,7 +468,7 @@ public class PlaylistFragment extends Fragment implements AdapterView.OnItemClic
 
             //((MainActivity)getActivity()).refreshSongs();
             //updateAdapter();
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -481,7 +481,7 @@ public class PlaylistFragment extends Fragment implements AdapterView.OnItemClic
     @Override
     public void onPrepareOptionsMenu(Menu menu) {
         // Do something that differs the Activity's menu here
-        menu.findItem(R.id.action_playlist_add).setVisible(true);
+        //menu.findItem(R.id.action_playlist_add).setVisible(true);
         super.onPrepareOptionsMenu(menu);
     }
 

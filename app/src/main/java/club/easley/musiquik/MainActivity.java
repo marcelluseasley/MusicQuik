@@ -982,18 +982,12 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
             case R.id.action_settings:
                 settingsDialog(getResources().getString(R.string.action_settings), "settings section", "Okay");
                 break;
-            case R.id.action_news:
-                settingsDialog(getResources().getString(R.string.action_news), getResources().getString(R.string.news_content), "Okay");
-                break;
+
             case R.id.action_about:
                 settingsDialog(getResources().getString(R.string.action_about), getResources().getString(R.string.about_content), "Okay");
                 break;
-            case R.id.action_contact:
-                settingsDialog(getResources().getString(R.string.action_contact), "contact section", "Okay");
-                break;
-            case R.id.action_help:
-                settingsDialog(getResources().getString(R.string.action_help), "help section", "Okay");
-                break;
+
+
             case R.id.action_dmca:
 
                 settingsDialog(getResources().getString(R.string.action_dmca),getResources().getString(R.string.dmca_content),"Okay");
