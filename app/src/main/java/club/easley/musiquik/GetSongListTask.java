@@ -194,9 +194,9 @@ Typeface font;
 
         }*/
 
-        jsonStr = makePostRequestMP3Monkey(searchQuery);
+        /*jsonStr = makePostRequestMP3Monkey(searchQuery);
         searchEngineName = "mp3monkey"; //TODO: check on mp3monkey
-
+*/
 
 //TODO: check out emp3world.com which redirects to emp3world.to
 
@@ -220,7 +220,11 @@ Typeface font;
             searchEngineName = "mp3rehab"; //TODO: check on mp3rehab...down for everybody
             //TODO: owner has let domain expire...NO!!!!!!
         }*/
-        if (jsonStr.equals("{}") || jsonStr.length() == 13) {
+
+        jsonStr = makePostRequest(searchQuery);
+        searchEngineName = "mp3monkey";
+
+        if (jsonStr.equals("{}") || jsonStr.length() == 14) {
 
             Log.d("*****NO RESULTS*****", "No results. Don't attempt Json parse");
             return null;
@@ -560,15 +564,15 @@ Typeface font;
     }
 
 
-    private String makePostRequest(String queryBitch) {
+    private String makePostRequest(String queryB) {
 
         HttpClient httpClient = new DefaultHttpClient();
 
         //HttpPost httpPost = new HttpPost("http://localhost:3000/getsonginfo/");
-        HttpPost httpPost = new HttpPost("http://nodejs-musban.rhcloud.com/getsonginfo");
+        HttpPost httpPost = new HttpPost("http://mqtornado.easley.club/getsongs");
         //Post Data
         List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(1);
-        nameValuePair.add(new BasicNameValuePair("querystring", queryBitch));
+        nameValuePair.add(new BasicNameValuePair("query", queryB));
 
         //Encoding POST data
         try {
