@@ -2,7 +2,7 @@
     <string name="app_name">MusiQuik</string>
 
     <string name="network_dialog_title">Connected?</string>
-    <string name="network_dialog_message">It appears there is no network connection.\nMake sure you are on-line.</string>
+    <string name="network_dialog_message">It appears there is no network connection.</string>
     <string name="network_dialog_button_text">OK</string>
 
     <!-- main menu options -->
@@ -18,27 +18,13 @@
     <!-- text for actionBar menus -->
 
     <string name="about_content">
-MusiQuik is an Android app that can be used to search and download virtually any song ever for FREE.\n\n
-The intent is that this app will be used to download royalty-free music. (However, we cannot control what users do).
-
-Provided a song name, artist, or combination search term, MusiQuik will scour the web for the song.\n
-This search term is submitted to various MP3 music servers. If a match is found, a list of the relevant songs is returned.
-Clicking on the song name will prompt, then proceed to download the song that you choose!\n\n
-Visit http://www.musicgold.info for more information.
+MusiQuik is an Android app that can be used to search and download virtually any song ever for FREE. The intent is that this app will be used to download royalty-free music. (However, we cannot control what users do). Provided a song name, artist, or combination search term, MusiQuik will scour the web for the song. This search term is submitted to various MP3 music servers. If a match is found, a list of the relevant songs is returned. Clicking on the song name will prompt, then proceed to download the song that you choose!
     </string>
     <string name="news_content">
 News related to MusiQuik will be here. Feature enhancements in the works, bugs to work out, and other information will be presented when necessary.
     </string>
-    <string name="dmca_content">
-1. As stated in 512(d) of the DMCA Online Copyright Infringement Liability Limitation Act, MusiQuik operates as an "Information Location Tool".\n
-2. MusiQuik is a music search engine (but mostly music player). This means we just search other search engines.\n
-3. MusiQuik links to other independent search engines that might host music files. We have absolutely no control over those domains.\n
-4. MusiQuik does not index or keep any digital copies of music WHATSOEVER!\n
-5. MusiQuik does not host any of the songs displayed in the search results AT ALL!\n
-6. You download music files from third party servers/services.\n
-7. All the rights associated with the song results are the property of their respective owners.\n\n
-Visit www.musicgold.info for more information.
-    </string>
+    <string name="dmca_content">As stated in 512(d) of the DMCA Online Copyright Infringement Liability Limitation Act, MusiQuik operates as an "Information Location Tool". MusiQuik is a music search engine (but mostly music player). This means we just search other search engines. MusiQuik links to other independent search engines that might host music files. We have absolutely no control over those domains. MusiQuik does not index or keep any digital copies of music WHATSOEVER! MusiQuik does not host any of the songs displayed in the search results AT ALL! You download music files from third party servers/services. All the rights associated with the song results are the property of their respective owners.
+</string>
 
 
     <string-array name="tabs">

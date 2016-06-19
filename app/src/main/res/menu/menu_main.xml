@@ -24,25 +24,9 @@
         android:visible="false"
         app:showAsAction="always" />-->
 
-    <item
-        android:id="@+id/action_playlist_add"
-        android:orderInCategory="93"
-        android:title="@string/action_playlist_add"
-        android:icon="@drawable/ic_playlist_add_white_24dp"
-        android:visible="false"
-        app:showAsAction="always" />
 
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="94"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
 
-    <item
-        android:id="@+id/action_news"
-        android:orderInCategory="95"
-        android:title="@string/action_news"
-        app:showAsAction="never" />
+
 
     <item
         android:id="@+id/action_about"
@@ -50,11 +34,7 @@
         android:title="@string/action_about"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/action_contact"
-        android:orderInCategory="97"
-        android:title="@string/action_contact"
-        app:showAsAction="never" />
+
 
     <item
         android:id="@+id/action_help"
