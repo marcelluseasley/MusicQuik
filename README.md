@@ -12,10 +12,10 @@ Initially, the scraping logic was written in Java and contained within the app i
 <img src="http://i.imgur.com/Mls33lV.png" width="200" />
 <img src="http://i.imgur.com/YG6JrNf.png" width="200" />
 
-## Updates - Amazon App Store (app still available on Aptoide.com)## 
-Since **MusiQuik** is an app to download MP3s, Amazon found that it violated certain terms and conditions (i.e. DMCA), so it was pulled from the store. The total number of downloads before being pulled was **826** :
+## Updates - Amazon App Store (app still available on Aptoide.com)
+Since **MusiQuik** is an app to download MP3s, Amazon found that it violated certain terms and conditions (i.e. DMCA), so it was pulled from the store. The total number of downloads before being pulled was **831** :
 ![downloads](http://i.imgur.com/oEDJt4V.png)
 ![graph](http://i.imgur.com/MU3ql5d.png)
 
-Here is the lifeline of the app. :-( I created it as a proof of concept to show how web scraping can be used in an actual application.
+Here is the lifeline of the app. :-( I created it as a proof of concept to show how web scraping can be used in an actual application.<br />
 ![lifeline](http://i.imgur.com/wKbQIRm.png)
